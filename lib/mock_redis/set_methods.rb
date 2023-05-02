@@ -27,6 +27,10 @@ class MockRedis
       end
     end
 
+    def sadd?(key, members)
+      sadd(key, members)
+    end
+
     def scard(key)
       with_set_at(key, &:length)
     end
