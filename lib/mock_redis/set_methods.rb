@@ -136,6 +136,10 @@ class MockRedis
       end
     end
 
+    def srem?(key, members)
+      srem(key, members)
+    end
+
     def sscan(key, cursor, opts = {})
       common_scan(smembers(key), cursor, opts)
     end
